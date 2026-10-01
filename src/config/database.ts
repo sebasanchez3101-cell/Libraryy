@@ -7,7 +7,6 @@ let db: Db;
 
 export const connectDB = async (): Promise<void> => {
     dns.setServers(["8.8.8.8", "8.8.4.4"])
-    dns.setServers(["8.8.8.8", "8.8.4.4"])
     client = new MongoClient(env.mongoUri);
     await client.connect();
     db = client.db(env.mongoDBName);
